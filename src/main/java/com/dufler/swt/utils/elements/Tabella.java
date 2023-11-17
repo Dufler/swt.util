@@ -199,7 +199,7 @@ public abstract class Tabella<T, C extends CriteriFiltraggio> extends TableViewe
 	
 	@Override
 	public final void aggiornaContenuto() {
-		List<T> contenuto = elaboraContenutoInAutonomia();
+		Collection<T> contenuto = elaboraContenutoInAutonomia();
 		if (contenuto != null)
 			setElementi(contenuto);
 		refresh();
@@ -208,7 +208,7 @@ public abstract class Tabella<T, C extends CriteriFiltraggio> extends TableViewe
 	/**
 	 * Metodo da estendere per tutte le tabelle in grado di gestire in autonomia il proprio contenuto.
 	 */
-	protected List<T> elaboraContenutoInAutonomia() {
+	protected Collection<T> elaboraContenutoInAutonomia() {
 		return null;
 	}
 
